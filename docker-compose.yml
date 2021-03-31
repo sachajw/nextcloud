@@ -2,12 +2,13 @@ web:
   image: nginx
   hostname: nginx
   volumes:
-   - .default.conf.tpl:/etc/nginx/templates
-   - .cert.pem:/etc/nginx/cert.pem
-   - .privkey.pem:/etc/nginx/privkey.pem
+   - default.conf.tpl:/etc/nginx/defau
+   - cert.pem:/etc/nginx/cert.pem
+   - privkey.pem:/etc/nginx/privkey.pem
   ports:
    - "8080:8080"
    - "443:443"
   environment:
    - NGINX_HOST=pangarabbit.com
    - NGINX_PORT=8080
+   restart: always
