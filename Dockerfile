@@ -3,6 +3,8 @@ LABEL maintainer="sachajw@gmail.com"
 
 COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 
+ENV 8080
+
 USER root
 
 RUN mkdir -p /vol/static
@@ -12,8 +14,6 @@ RUN chown nginx:nginx /etc/nginx/conf.d/default.conf
 
 COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-
-EXPOSE 8888
 
 USER nginx
 
