@@ -2,8 +2,9 @@ version: "3"
 
 services:
   web:
+    container_name: nginx
     image: nginx
-    hostname: nginx
+    hostname: nginx.pangarabbit.com
     ports:
     - "8080:8080"
     - "443:443"
