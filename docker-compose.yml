@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-     web:
-      container_name: nginx
-      image: nginx
-      hostname: nginx.pangarabbit.com
-      ports:
-        - "8080:8080"
-        - "443:443"
-  network_mode:
-  environment:
-    - NGINX_HOST=pangarabbit.com
-    - NGINX_PORT=8080
-  restart: always
+  web:
+    container_image: nginx
+    image: nginx
+    hostname: nginx.pangarabbit.com
+    ports:
+      - "8080:8080"
+      - "443":"443"
+    network_mode:
+    environment:
+      - NGINX_HOST=pangarabbit.com
+      - NGINX_PORT=8080
+    restart: always
