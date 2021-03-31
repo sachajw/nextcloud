@@ -4,7 +4,7 @@ web:
   volumes:
    - ./etc/nginx/templates
    - ./cert:/etc/nginx/cert.pem
-   - . /cert:/etc/nginx/privkey.pem
+   - ./cert:/etc/nginx/privkey.pem
   ports:
    - "8080:8080"
    - "443:443"
