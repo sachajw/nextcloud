@@ -3,7 +3,7 @@ LABEL maintainer="sachajw@gmail.com"
 
 COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 
-ENV 8080
+ENV 8080:8080
 
 USER root
 
