@@ -2,8 +2,8 @@ web:
   image: nginx
   hostname: nginx
   volumes:
-   - . /templates:/etc/nginx/templates
-   - . /cert:/etc/nginx/cert.pem
+   - ./etc/nginx/templates
+   - ./cert:/etc/nginx/cert.pem
    - . /cert:/etc/nginx/privkey.pem
   ports:
    - "8080:8080"
