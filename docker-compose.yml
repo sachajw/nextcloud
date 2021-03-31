@@ -2,9 +2,6 @@ version: "3.7"
 web:
   image: nginx
   hostname: nginx
-  volumes:
-   - ./cert.pem:/etc/nginx/cert.pem
-   - ./privkey.pem:/etc/nginx/privkey.pem
   ports:
    - "8080:8080"
    - "443:443"
