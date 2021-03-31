@@ -3,9 +3,6 @@ LABEL maintainer="sachajw@gmail.com"
 
 COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 
-ENV LISTEN_PORT=8080
-ENV LISTEN_PORT=4443
-
 USER root
 
 RUN mkdir -p /vol/static
@@ -16,7 +13,7 @@ RUN chown nginx:nginx /etc/nginx/conf.d/default.conf
 COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-EXPOSE 8080
+EXPOSE 8888
 
 USER nginx
 
