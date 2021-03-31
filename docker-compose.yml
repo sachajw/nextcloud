@@ -2,9 +2,9 @@ web:
   image: nginx
   hostname: nginx
   volumes:
-   - ./etc/nginx/templates
-   - ./cert:/etc/nginx/cert.pem
-   - ./cert:/etc/nginx/privkey.pem
+   - .default.conf.tpl:/etc/nginx/templates
+   - .cert.pem:/etc/nginx/cert.pem
+   - .privkey.pem:/etc/nginx/privkey.pem
   ports:
    - "8080:8080"
    - "443:443"
