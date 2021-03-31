@@ -1,9 +1,9 @@
 FROM nginxinc/nginx-unprivileged:1-alpine
 LABEL maintainer="sachajw@gmail.com"
 
-COPY . template/default.conf.tpl /etc/nginx/default.conf.tpl
-COPY . cert/cert.pem /etc/nginx/cert.pem
-COPY . cert/privkey.pem /etc/nginx/privkey.pem
+COPY .default.conf.tpl /etc/nginx/default.conf.tpl
+COPY .cert.pem /etc/nginx/cert.pem
+COPY .privkey.pem /etc/nginx/privkey.pem
 
 ENV LISTEN_PORT=8080
 
