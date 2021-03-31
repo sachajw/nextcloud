@@ -1,10 +1,10 @@
-FROM nginx
+FROM nginxinc/nginx-unprivileged:1-alpine
 LABEL maintainer="sachajw@gmail.com"
 
 COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 
-ENV LISTEN_PORT=80
-ENV LISTEN_PORT=443
+ENV LISTEN_PORT=8080
+ENV LISTEN_PORT=4443
 
 USER root
 
@@ -15,6 +15,8 @@ RUN chown nginx:nginx /etc/nginx/conf.d/default.conf
 
 COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+
+EXPOSE 8080
 
 USER nginx
 
