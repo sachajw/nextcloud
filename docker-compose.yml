@@ -1,15 +1,16 @@
 version: "3"
 
-services:
-  web:
-    container_image: nginx
-    image: nginx
-    hostname: nginx.pangarabbit.com
+#Nginx Service
+  webserver:
+    image: nginx:alpine
+    container_name: nginx
+    restart: always
+    tty: true
     ports:
       - "8080:8080"
-      - "443":"443"
-    network_mode:
-    environment:
-      - NGINX_HOST=pangarabbit.com
-      - NGINX_PORT=8080
-    restart: always
+      - "443:443"
+    volumes:
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    networks:
+      - app-network
