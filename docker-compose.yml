@@ -8,9 +8,10 @@ services:
       ports:
         - "8080:8080"
         - "443:443"
+      environment: 
+        - NGINX_HOST=pangarabbit.com
 #      volumes:
 #        - ./:/var/www
 #        - ./nginx/conf.d/:/etc/nginx/conf.d/
-      networks:
-        - app-network
-      
+#      networks:
+#        - app-network
