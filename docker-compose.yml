@@ -1,17 +1,16 @@
 version: "3"
-
-#Nginx Service
-webserver:
-    image: nginx:alpine
-    container_name: nginx
-    restart: always
-    tty: true
-    ports:
-      - "8080:8080"
-      - "443:443"
-    volumes:
-      - ./:/var/www
-      - ./nginx/conf.d/:/etc/nginx/conf.d/
-    networks:
-      - app-network
+services:
+  webserver:
+      image: nginx:alpine
+      container_name: nginx
+      restart: always
+      tty: true
+      ports:
+        - "8080:8080"
+        - "443:443"
+#      volumes:
+#        - ./:/var/www
+#        - ./nginx/conf.d/:/etc/nginx/conf.d/
+      networks:
+        - app-network
       
