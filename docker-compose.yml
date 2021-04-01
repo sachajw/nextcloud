@@ -1,7 +1,7 @@
 version: "3"
 
 #Nginx Service
-  webserver:
+webserver:
     image: nginx:alpine
     container_name: nginx
     restart: always
