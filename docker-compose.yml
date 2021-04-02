@@ -12,5 +12,3 @@ services:
         - NGINX_HOST=pangarabbit.com
       volumes:
         - ./nginx/conf.d/:/etc/nginx/conf.d/
-      networks:
-        - bridge
