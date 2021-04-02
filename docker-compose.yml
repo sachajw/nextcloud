@@ -11,7 +11,6 @@ services:
       environment: 
         - NGINX_HOST=pangarabbit.com
       volumes:
-        - ./default.conf.tpl:/etc/nginx/conf.d/
         - ./cert.pem:/etc/ssl/cert.pem
         - ./privkey.pem:/etc/ssl/privkey.pem
 
