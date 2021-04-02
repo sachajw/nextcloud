@@ -13,5 +13,3 @@ services:
       volumes:
         - ./cert.pem:/etc/ssl/cert.pem
         - ./privkey.pem:/etc/ssl/privkey.pem
-        - ./nginx.conf:/etc/nginx/conf.d/
-
