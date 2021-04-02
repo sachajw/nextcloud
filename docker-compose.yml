@@ -6,8 +6,8 @@ services:
       restart: always
       tty: true
       ports:
-        - "8080:8080"
-        - "443:443"
+        - "8888:8888"
+        - "4443:4443"
       environment: 
         - NGINX_HOST=pangarabbit.com
       volumes:
