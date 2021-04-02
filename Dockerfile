@@ -5,8 +5,8 @@ COPY ./default.conf.tpl /etc/nginx/default.conf.tpl
 
 USER root
 
-RUN touch /etc/nginx/conf.d/default.conf
-RUN chown nginx:nginx /etc/nginx/conf.d/default.conf
+#RUN touch /etc/nginx/conf.d/default.conf
+#RUN chown nginx:nginx /etc/nginx/conf.d/default.conf
 
 #COPY ./cert.pem /etc/nginx/cert.pem
 #COPY ./privkey.pem /etc/nginx/privkey.pem
