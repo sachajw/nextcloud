@@ -1,15 +1,15 @@
 # generated 2021-03-31, Mozilla Guideline v5.6, nginx 1.17.7, OpenSSL 1.1.1d, modern configuration
 # https://ssl-config.mozilla.org/#server=nginx&version=1.17.7&config=modern&openssl=1.1.1d&guideline=5.6
 server {
-    listen 8888 default_server;
-    listen [::]:8888 default_server;
+    listen 8080 default_server;
+    listen [::]:8080 default_server;
 
     return 301 https://$host$request_uri;
 }
 
 server {
-    listen 4443 ssl http2;
-    listen [::]:4443 ssl http2;
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
 
     ssl_certificate /etc/ssl/cert.pem;
     ssl_certificate_key /etc/ssl/privkey.pem;

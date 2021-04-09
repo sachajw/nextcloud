@@ -8,6 +8,8 @@ USER root
 RUN touch /etc/nginx/conf.d/default.conf
 RUN chown nginx:nginx /etc/nginx/conf.d/default.conf
 
+COPY ./cert.pem /etc/ssl/cert.pem
+COPY ./privkey.pem /etc/ssl/privkey.pem
 COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
