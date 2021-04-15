@@ -18,3 +18,4 @@ EXPOSE 8080 443
 USER nginx
 
 CMD ["/entrypoint.sh"]
+
